@@ -25,7 +25,7 @@ jobs:
       - name: Install Dependencies
 
         run: |
-          pip install -r predictive_maintenance_project/requirements.txt
+          pip install -r predictive_maintenance_project_12062026/requirements.txt
 
       - name: Register Dataset
 
@@ -33,7 +33,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
         run: |
-          python predictive_maintenance_project/model_building/data_register.py
+          python predictive_maintenance_project_12062026/model_building/data_register.py
 
   data-preparation:
 
@@ -55,7 +55,7 @@ jobs:
       - name: Install Dependencies
 
         run: |
-          pip install -r predictive_maintenance_project/requirements.txt
+          pip install -r predictive_maintenance_project_12062026/requirements.txt
 
       - name: Data Preparation
 
@@ -63,7 +63,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
         run: |
-          python predictive_maintenance_project/model_building/prep.py
+          python predictive_maintenance_project_12062026/model_building/prep.py
 
   model-training:
 
@@ -85,7 +85,7 @@ jobs:
       - name: Install Dependencies
 
         run: |
-          pip install -r predictive_maintenance_project/requirements.txt
+          pip install -r predictive_maintenance_project_12062026/requirements.txt
 
       - name: Train Model
 
@@ -93,7 +93,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
         run: |
-          python predictive_maintenance_project/model_building/train.py
+          python predictive_maintenance_project_12062026/model_building/train.py
 
   deploy-space:
 
@@ -118,7 +118,7 @@ jobs:
       - name: Install Dependencies
 
         run: |
-          pip install -r predictive_maintenance_project/requirements.txt
+          pip install -r predictive_maintenance_project_12062026/requirements.txt
 
       - name: Deploy Streamlit App
 
@@ -126,4 +126,4 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
         run: |
-          python predictive_maintenance_project/hosting/hosting.py
+          python predictive_maintenance_project_12062026/hosting/hosting.py
